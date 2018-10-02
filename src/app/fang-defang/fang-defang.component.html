@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="fang">
+		<label>Fang:</label>
+		<input type="textarea" name="fang" [(ngModel)]="fang" placeholder="Write fang text...">
+	</div>
+	<div class="btn">
+		<div>
+			<button (click)="onDefang()">Defang ></button><br>
+			<button (click)="onFang()">< Fang</button>
+		</div>
+	</div>
+	<div class="defang">
+		<label>Defang:</label>
+		<input type="textarea" name="defang" [(ngModel)]="defang" placeholder="Write defang text...">
+	</div>
+</div>
