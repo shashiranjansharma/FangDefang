@@ -1,25 +1,31 @@
 <!-- <div class="nav-bar">
   <div class="nav-item">
     <ul class="nav-ul">
-      <li class="nav-li" *ngFor="let link of links" (click)="getLink($event, link)" >
+      <li class="nav-li" *ngFor="let link of abcd; let i = index" (click)="getLink($event, link, i)" >
         <a class="nav-a">{{link.name}}</a>
       </li>
     </ul>
   </div>
   <div *ngIf="displayChild">
     <ul>
-      <li *ngFor="let link of childLinks" (click)="getLink($event, link)" >
+      <li *ngFor="let link of abcd[i].links; let i = index" (click)="getLink($event, link, i)" >
         <a>{{link.name}}</a>
       </li>
     </ul>
   </div>
-  <div *ngIf="displayChild">
+  <div *ngIf="displaySubChild">
     <ul>
-      <li *ngFor="let link of childLinks" (click)="getLink($event, link)" >
+      <li *ngFor="let link of abcd[i].links[i].links; let i = index" (click)="getLink($event, link, i)" >
         <a>{{link.name}}</a>
       </li>
     </ul>
   </div>
-</div>
- -->
+  <div *ngIf="displaySubSubChild">
+    <ul>
+      <li *ngFor="let link of abcd[i].links[i].links[i].links" (click)="getLink($event, link)" >
+        <a>{{link.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div> -->
  <app-fang-defang></app-fang-defang>

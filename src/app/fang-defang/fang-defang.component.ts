@@ -44,7 +44,7 @@ export class FangDefangComponent implements OnInit {
 	 	test = this.defang.split(" ");
 	 	for(var i = 0; i < test.length; i++ ){
 			test[i] = test[i].replace(/\[\.]/g, ".");
-			test[i] = test[i].replace(/\[\ @]/g, "@");
+			test[i] = test[i].replace(/\[\@]/g, "@");
 			test[i] = test[i].replace("hxxp", "http");
 		}
 		this.fang = test.join(" ");
