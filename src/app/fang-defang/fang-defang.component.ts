@@ -10,8 +10,8 @@ export class FangDefangComponent implements OnInit {
 	fang = "";
 	defang = "";
 
-	onDefang(test){
-		test = this.fang.split(" ");
+	onDefang(){
+		var test = this.fang.split(" ");
 		for(var i = 0; i < test.length; i++ ){
 			test[i] = test[i].replace(/\[\.]/g, ".");
 			test[i] = test[i].replace(/\[\ @]/g, "@");
@@ -40,8 +40,8 @@ export class FangDefangComponent implements OnInit {
 		}
 	}
 
-	onFang(test){
-	 	test = this.defang.split(" ");
+	onFang(){
+	 	var test = this.defang.split(" ");
 	 	for(var i = 0; i < test.length; i++ ){
 			test[i] = test[i].replace(/\[\.]/g, ".");
 			test[i] = test[i].replace(/\[\@]/g, "@");
