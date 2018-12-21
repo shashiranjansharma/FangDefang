@@ -1,31 +1,32 @@
-<!-- <div class="nav-bar">
+<!-- <app-fang-defang></app-fang-defang> -->
+<div class="nav-bar">
   <div class="nav-item">
     <ul class="nav-ul">
-      <li class="nav-li" *ngFor="let link of abcd; let i = index" (click)="getLink($event, link, i)" >
+      <li class="nav-li" *ngFor="let link of my_data; let i = index" (mouseover)="getChild1($event, link, i)" >
         <a class="nav-a">{{link.name}}</a>
       </li>
     </ul>
   </div>
-  <div *ngIf="displayChild">
-    <ul>
-      <li *ngFor="let link of abcd[i].links; let i = index" (click)="getLink($event, link, i)" >
-        <a>{{link.name}}</a>
-      </li>
-    </ul>
-  </div>
-  <div *ngIf="displaySubChild">
-    <ul>
-      <li *ngFor="let link of abcd[i].links[i].links; let i = index" (click)="getLink($event, link, i)" >
-        <a>{{link.name}}</a>
-      </li>
-    </ul>
-  </div>
-  <div *ngIf="displaySubSubChild">
-    <ul>
-      <li *ngFor="let link of abcd[i].links[i].links[i].links" (click)="getLink($event, link)" >
-        <a>{{link.name}}</a>
-      </li>
-    </ul>
-  </div>
-</div> -->
- <app-fang-defang></app-fang-defang>
+</div>
+ 
+<div class="child1_elements" *ngIf="my_child1.length != 0" [ngStyle]="{'top.px': child1_top, 'left.px':child1_left+20}">
+  <ul>
+    <li *ngFor="let link of my_child1; let i = index" (mouseover)="getChild2($event, link, i)">
+      <a href="">{{link.name}}</a>
+    </li>
+  </ul>  
+</div>
+<div class="child2_elements" *ngIf="my_child2.length != 0" [ngStyle]="{'top.px': child2_top, 'left.px': child2_left+20}">
+  <ul>
+    <li *ngFor="let link of my_child2; let i = index" (mouseover)="getChild3($event, link, i)">
+      <a href="">{{link.name}}</a>
+    </li>
+  </ul>  
+</div>
+<div class="child3_elements" *ngIf="my_child3.length != 0" [ngStyle]="{'top.px': child3_top, 'left.px': child3_left+20}">
+  <ul>
+    <li *ngFor="let link of my_child3;">
+      <a href="">{{link.name}}</a>
+    </li>
+  </ul>  
+</div>

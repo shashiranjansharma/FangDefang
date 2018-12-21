@@ -2,6 +2,7 @@
     border: 1px solid #000000;
     font-size: 20px;
     padding: 15px 0;
+    position: relative;
 }
 .nav-ul{
     display: inline;
@@ -19,4 +20,29 @@
 }
 .margintop{
     margin-top: 20px;
+}
+
+.child1_elements{
+    border: 1px solid #000000;
+    width: 100px;
+    background: blue;
+    position: absolute;
+    text-decoration: none;
+    color: white;
+}
+.child2_elements{
+    border: 1px solid #000000;
+    width: 100px;
+    background: green;
+    position: absolute;
+    text-decoration: none;
+    color: white;
+}
+.child3_elements{
+    border: 1px solid #000000;
+    width: 100px;
+    background: orange;
+    position: absolute;
+    text-decoration: none;
+    color: white;
 }
